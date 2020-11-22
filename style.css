@@ -1,0 +1,22 @@
+* {
+    font-family: 'Comfortaa', cursive;
+}
+li{
+	padding: 0.5%;
+	font-size: 20px;
+}
+div{
+	font-size: 20px;
+}
+#btn{
+	margin-left:  10px;
+	border: 3px solid #0E1EF7;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    padding: 10px 16px;
+}
+#btn:hover {
+    background-color: #F819E6;
+    color: white;
+}
+

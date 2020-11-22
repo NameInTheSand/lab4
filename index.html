@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app='ControllerAsApp'>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Лабораторна робота номер 4</title>
+</head>
+<body>
+<div id="list1" ng-controller='ShoppingListController1 as list1'>
+    <h3>Купити:</h3>
+    <ol>
+        <li ng-repeat="item in list1.item">
+            Купити {{item.quantity}} {{item.name}}
+            <button ng-click="list1.removeItem($index);" id ="btn">Купити</button>
+        </li>
+    </ol>
+       <div ng-if="list1.item.length === 0">
+       Усе куплено
+    </div>
+</div>
+<div id="list2" ng-controller='ShoppingListController2 as list2'>
+    <h3>Куплено</h3>
+    <ol>
+        <li ng-repeat="item in list2.item">
+            Куплено{{ item.quantity}} {{item.name}}
+        </li>
+    </ol>
+    <div ng-if="list2.item.length === 0">
+        Ще нічого не куплено
+    </div>
+</div>
+</body>
+</html>
